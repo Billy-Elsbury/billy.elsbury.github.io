@@ -187,8 +187,8 @@ function deleteCardByID() {
 }
 
 function syncWithCouchDB() {
-    var remoteCouchDB = new PouchDB('http://admin:password@127.0.0.1:5984/yugioh_cards_db');
-    //var remoteCouchDB = new PouchDB('https://apikey-v2-2wxq6v47t1wa8fehju3epoyln49bjq1u5wc23q8x3yhv:db7affcefa8f46faa8e532c281f098a1@3983e07f-425c-4045-8610-187b82996b9b-bluemix.cloudantnosqldb.appdomain.cloud/my_new_database');
+    //var remoteCouchDB = new PouchDB('http://admin:password@127.0.0.1:5984/yugioh_cards_db');
+    var remoteCouchDB = new PouchDB('https://apikey-v2-2wxq6v47t1wa8fehju3epoyln49bjq1u5wc23q8x3yhv:db7affcefa8f46faa8e532c281f098a1@3983e07f-425c-4045-8610-187b82996b9b-bluemix.cloudantnosqldb.appdomain.cloud/my_new_database');
 
     db.sync(remoteCouchDB, {
         live: true,   // Live sync for continuous synchronisation
